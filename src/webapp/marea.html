@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Marea - Página Impactante</title>
+<style>
+/* ===== Estilos generales ===== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial Black', Arial, sans-serif;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+              url('image/fondo-marea.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+}
+
+/* ===== H1 impactante ===== */
+h1 {
+  font-size: 80px;
+  color: #ff0000;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  text-shadow:
+    2px 2px 0 #000,
+    4px 4px 0 #222,
+    0 0 15px #ff0000,
+    0 0 25px #ff4500,
+    0 0 35px #ff6347;
+  margin-top: 50px;
+  animation: neonGlow 1.5s infinite alternate, h1Move 3s infinite alternate;
+  position: relative;
+}
+
+/* Animación de neón */
+@keyframes neonGlow {
+  0% {
+    text-shadow: 2px 2px 0 #000, 4px 4px 0 #222, 0 0 15px #ff0000, 0 0 25px #ff4500, 0 0 35px #ff6347;
+  }
+  100% {
+    text-shadow: 2px 2px 0 #000, 4px 4px 0 #222, 0 0 25px #ff4500, 0 0 40px #ff6347, 0 0 60px #ff0000;
+  }
+}
+
+/* Movimiento sutil horizontal */
+@keyframes h1Move {
+  0% { left: -10px; }
+  50% { left: 10px; }
+  100% { left: -10px; }
+}
+
+/* ===== Sección de integrantes ===== */
+.componentes {
+  width: 450px;
+  margin: 40px auto;
+  padding: 25px;
+  background: rgba(50, 50, 50, 0.6);
+  border: 3px solid #ff4500;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #ff0000;
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.componentes:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px #ff6347;
+}
+
+.componentes h2 {
+  text-align: center;
+  color: #ff6347;
+  margin-bottom: 15px;
+}
+
+/* ===== Tabla discografía ===== */
+table {
+  width: 500px;
+  margin: 30px auto;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 20px #ff0000;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+th {
+  background: linear-gradient(90deg, #ff0000, #ff4500);
+  color: #fff;
+  font-size: 18px;
+}
+
+tr:nth-child(even) td {
+  background: rgba(100, 0, 0, 0.6);
+}
+
+tr:nth-child(odd) td {
+  background: rgba(150, 0, 0, 0.6);
+}
+
+tr:hover td {
+  background: #ff6347;
+  color: #000;
+  font-weight: bold;
+  transform: scale(1.05);
+}
+
+/* Pie de tabla */
+tfoot td {
+  background-color: #000;
+  color: #ff4500;
+  font-style: italic;
+}
+
+/* ===== Pie de página ===== */
+footer {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: rgba(0,0,0,0.7);
+  color: #ff4500;
+  font-size: 14px;
+}
+</style>
+</head>
+<body>
+
+<h1>Marea</h1>
+<p>Banda de rock de Berriozar, Navarra, conocida por su estilo directo y potente.</p>
+
+<div class="componentes">
+  <h2>Integrantes</h2>
+  <ul>
+    <li>Karlos Aranzegi - Voz</li>
+    <li>Eduardo Beaumont - Guitarra</li>
+    <li>Alfredo Piedrafita - Guitarra</li>
+    <li>Raúl Gámez - Bajo</li>
+    <li>José “Piñas” - Batería</li>
+  </ul>
+</div>
+
+<table>
+  <thead>
+    <tr><th>Año</th><th>Disco</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>1999</td><td>La Patera</td></tr>
+    <tr><td>2001</td><td>Revolcón</td></tr>
+    <tr><td>2002</td><td>Besos de perro</td></tr>
+    <tr><td>2004</td><td>28.000 puñaladas</td></tr>
+    <tr><td>2007</td><td>Las aceras están llenas de piojos</td></tr>
+    <tr><td>2009</td><td>En mi hambre mando yo</td></tr>
+    <tr><td>2011</td><td>...Entre los árboles</td></tr>
+    <tr><td>2015</td><td>El azogue</td></tr>
+  </tbody>
+  <tfoot>
+    <tr><td colspan="2">Marea es conocida por su energía y letras potentes.</td></tr>
+  </tfoot>
+</table>
+
+<footer>
+  &copy; 2025 Página de fans de Marea. Todos los derechos reservados.
+</footer>
+
+</body>
+</html>

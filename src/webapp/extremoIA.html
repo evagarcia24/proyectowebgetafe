@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Extremoduro</title>
+
+<style>
+/* ===== Estilos generales ===== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-image: url('image/fondo.jpg'); /* Imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+  text-align: center;
+}
+
+/* Filtro semitransparente sobre fondo */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  z-index: -1;
+}
+
+/* ===== H1 espectacular ===== */
+h1 {
+  font-size: 60px;
+  color: #ff4500;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-shadow: 
+    2px 2px 0 #000, 
+    4px 4px 0 #222, 
+    6px 6px 0 #444, 
+    0 0 20px #ff4500, 
+    0 0 30px #ff6347, 
+    0 0 40px #ff7f50;
+  margin-top: 50px;
+  animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 
+      2px 2px 0 #000, 
+      4px 4px 0 #222, 
+      6px 6px 0 #444, 
+      0 0 20px #ff4500, 
+      0 0 30px #ff6347, 
+      0 0 40px #ff7f50;
+  }
+  to {
+    text-shadow: 
+      2px 2px 0 #000, 
+      4px 4px 0 #222, 
+      6px 6px 0 #444, 
+      0 0 25px #ff6347, 
+      0 0 35px #ff7f50, 
+      0 0 50px #ff4500;
+  }
+}
+
+/* ===== Tabla de discografía ===== */
+table {
+  width: 400px;
+  margin: 30px auto;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border: 2px solid #333;
+  text-align: center;
+}
+
+th {
+  background-color: #444;
+  color: #fff;
+}
+
+tr:nth-child(even) td {
+  background-color: #555;
+}
+
+tr:nth-child(odd) td {
+  background-color: #666;
+}
+
+tfoot td {
+  background-color: #222;
+  color: #ff6347;
+  font-style: italic;
+  text-align: center;
+}
+
+/* ===== Componentes de la banda ===== */
+.componentes {
+  width: 400px;
+  margin: 20px auto;
+  padding: 15px;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 10px;
+  text-align: left;
+}
+
+/* Botón interactivo */
+button {
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #ff4500;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #ff6347;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Extremoduro</h1>
+
+<p>Banda española de rock fundada en Plasencia (Cáceres) en 1987 por Roberto Iniesta "Robe".</p>
+
+<!-- ===== Componentes ===== -->
+<div class="componentes">
+  <h2>Integrantes principales:</h2>
+  <ul>
+    <li>Roberto Iniesta (Robe) - Voz y guitarra</li>
+    <li>Iñaki Antón "Uoho" - Guitarra</li>
+    <li>Miguel Colino - Bajo</li>
+    <li>José Ignacio Cantera - Batería</li>
+  </ul>
+</div>
+
+<!-- ===== Tabla discografía ===== -->
+<table id="discografia">
+  <thead>
+    <tr>
+      <th>Año</th>
+      <th>Disco</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>1989</td><td>Rock Transgresivo</td></tr>
+    <tr><td>1991</td><td>Somos unos animales</td></tr>
+    <tr><td>1992</td><td>Deltoya</td></tr>
+    <tr><td>1995</td><td>¿Dónde están mis amigos?</td></tr>
+    <tr><td>1995</td><td>Pedrá</td></tr>
+    <tr><td>1998</td><td>Canciones prohibidas</td></tr>
+    <tr><td>2002</td><td>Yo, minoría absoluta</td></tr>
+    <tr><td>2008</td><td>La ley innata</td></tr>
+    <tr><td>2011</td><td>Material defectuoso</td></tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="2">"La ley innata" es uno de los discos más importantes y emblemáticos de Extremoduro.</td>
+    </tr>
+  </tfoot>
+</table>
+
+	<img src="image/extremo.jpg" Alt="Extremoduro" width=80%><br><br>
+
+	<a href="https://www.extremoduro.com/" style="color: grey; font-size: 50px;">Extremoduro Página Oficial</a>
+
+</body>
+</html>
